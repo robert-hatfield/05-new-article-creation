@@ -79,8 +79,13 @@ articleView.initNewArticlePage = function() {
   });
   // IDEA: Add a icon that can be clicked to copy the JSON. (ala GitHub's clone button)
 
-  // TODO: Add an event handler to update the preview and the export field if any inputs change.
-
+  // NOTREACHED: Add an event handler to update the preview and the export field if any inputs change.
+  $('#new-form').on('change') {
+    // update the preview
+    // $('#articles')
+    // update the export field
+    // $('#article-json')
+  }
 };
 
 articleView.create = function() {
