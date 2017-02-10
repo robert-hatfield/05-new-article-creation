@@ -70,12 +70,14 @@ articleView.initNewArticlePage = function() {
   // DONE: Ensure the main .tab-content area is revealed. We might add more tabs later.
   $('.tab-content').show();
 
-  // TODO: The new articles we create will be copy/pasted into our source data file.
+  // DONE: The new articles we create will be copy/pasted into our source data file.
   // Set up this "export" functionality. We can hide it for now, and show it once we have data to export.
+  $('export-field').hide();
 
   $('#article-json').on('focus', function(){
     this.select();
   });
+  // IDEA: Add a icon that can be clicked to copy the JSON. (ala GitHub's clone button)
 
   // TODO: Add an event handler to update the preview and the export field if any inputs change.
 
