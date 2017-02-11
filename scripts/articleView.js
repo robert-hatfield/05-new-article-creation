@@ -105,8 +105,8 @@ articleView.create = function() {
     publishedOn:$('#article-published:checked').length ? new Date() : null;
   });
 
-  // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
-
+  // DONE: Use our interface to the Handblebars template to put this new article into the DOM:
+  $('#articles').append(article.toHtml());
 
   // TODO: Activate the highlighting of any code blocks:
   $('pre code').each(function(i, block) {
