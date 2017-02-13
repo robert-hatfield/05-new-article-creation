@@ -77,15 +77,9 @@ articleView.initNewArticlePage = function() {
   $('#article-json').on('focus', function(){
     this.select();
   });
-  // IDEA: Add a icon that can be clicked to copy the JSON. (ala GitHub's clone button)
 
-  // NOTREACHED: Add an event handler to update the preview and the export field if any inputs change.
-  $('#new-form').on('change') {
-    // update the preview
-    // $('#articles')
-    // update the export field
-    // $('#article-json')
-  }
+  // DONE: Add an event handler to update the preview and the export field if any inputs change.
+  $('#new-form').on('change', articleView.create());
 };
 
 articleView.create = function() {
@@ -102,7 +96,7 @@ articleView.create = function() {
     title: $('#article-title').val(),
     category: $('#article-category').val(),
     body: $('#article-body').val(),
-    publishedOn:$('#article-published:checked').length ? new Date() : null;
+    publishedOn:$('#article-published:checked').length ? new Date() : null
   });
 
   // DONE: Use our interface to the Handblebars template to put this new article into the DOM:
